@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { useColor } from "../../ColorContext/ColorContext";
 
 function DialogueBox({ text }) {
+  const { palette } = useColor();
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
@@ -23,7 +25,14 @@ function DialogueBox({ text }) {
   }, [text]);
 
   return (
-    <div className="w-11/12 max-w-3xl bg-white bg-opacity-90 border-2 border-gray-300 rounded-xl px-6 shadow-xl text-center text-xl text-gray-800 font-semibold justify-center">
+    <div
+      className="w-11/12 max-w-3xl rounded-xl px-6 shadow-xl text-center text-xl font-semibold justify-center border-2"
+      style={{
+        backgroundColor: palette.shade3,
+        color: palette.shade0,
+        borderColor: palette.shade0,
+      }}
+    >
       {displayedText}
     </div>
   );

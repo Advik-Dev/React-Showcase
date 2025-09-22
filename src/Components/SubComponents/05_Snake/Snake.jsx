@@ -2,8 +2,10 @@ import Tile from "./Tile";
 import { opposites, keyToDirection } from "./otherData.js";
 import { useState, useEffect, useRef, useCallback } from "react";
 import Dpad from "./Dpad.jsx";
+import { useColor } from "../../ColorContext/ColorContext";
 
 function Snake() {
+  const { palette } = useColor();
   const boardSize = 15;
   const playerSize = 7;
 
@@ -189,8 +191,14 @@ function Snake() {
   }, []);
 
   return (
-    <div className="bg-gray-900 min-w-80 md:min-w-100 lg:min-w-140 rounded-2xl flex lg:flex-row flex-col items-center justify-center relative">
-      <div className="border-3 border-green-400 md:m-10 m-4">
+    <div
+      className="min-w-80 md:min-w-100 lg:min-w-140 rounded-2xl flex lg:flex-row flex-col items-center justify-center relative"
+      style={{ backgroundColor: palette.shade0 }}
+    >
+      <div
+        className="border-3 md:m-10 m-4"
+        style={{ borderColor: palette.shade3 }}
+      >
         <div className="grid grid-cols-15">
           {tiles.flat().map((type, index) => (
             <Tile key={index} tileID={index} type={type} />
@@ -198,7 +206,10 @@ function Snake() {
         </div>
       </div>
       <div className="flex mb-5 md:items-center flex-col items-center text-center">
-        <div className="mb-5 text-green-400 font-bold text-4xl">
+        <div
+          className="mb-5 font-bold text-4xl"
+          style={{ color: palette.shade3 }}
+        >
           - {score} -
           <div className="text-gray-500 text-sm text-center">
             High Score - {localStorage.getItem("snakeHS") || 0}
@@ -207,13 +218,22 @@ function Snake() {
         <Dpad setDirection={setDirection} />
         <button
           className={`
-            px-4 py-2 rounded-xl text-black bg-green-400
-            hover:bg-green-500 hover:ring-2 hover:ring-green-300
+            px-4 py-2 rounded-xl 
             active:scale-95 transition-all duration-300 ease-in-out
             shadow-md hover:shadow-lg select-none
             transform absolute bottom-5 right-5
             ${gameRunning.current ? "scale-0" : "scale-100"}
           `}
+          style={{
+            color: palette.shade0,
+            backgroundColor: palette.shade3,
+          }}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.backgroundColor = palette.shade2)
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.backgroundColor = palette.shade3)
+          }
           onClick={startGame}
         >
           {buttonName}

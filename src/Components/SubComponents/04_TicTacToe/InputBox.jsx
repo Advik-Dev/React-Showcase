@@ -1,4 +1,5 @@
 import { useState, forwardRef, useImperativeHandle } from "react";
+import { useColor } from "../../ColorContext/ColorContext";
 
 const InputBox = forwardRef(function InputBox(
   {
@@ -13,6 +14,7 @@ const InputBox = forwardRef(function InputBox(
   },
   ref
 ) {
+  const { palette } = useColor();
   const [buttonVal, setButtonVal] = useState("");
 
   useImperativeHandle(ref, () => ({
@@ -48,7 +50,12 @@ const InputBox = forwardRef(function InputBox(
       value={value}
       onClick={handleClick}
       disabled={isDisabled}
-      className="h-15 w-15 bg-gray-950 border-2 border-green-400 text-5xl text-green-400 font-geo"
+      className="h-15 w-15 border-2 text-5xl font-geo"
+      style={{
+        backgroundColor: palette.shade3,
+        borderColor: palette.shade0,
+        color: palette.shade0,
+      }}
     >
       {buttonVal}
     </button>

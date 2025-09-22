@@ -1,10 +1,13 @@
+import { useColor } from "../ColorContext/ColorContext";
 function Bubbles({ bubbleArray }) {
+  const { palette } = useColor();
   return (
     <div className="flex flex-wrap gap-1 md:gap-2">
       {bubbleArray.map((text, index) => (
         <span
           key={index}
-          className="px-3 py-1.5 bg-orange-200 text-orange-900 rounded-full text-xs font-semibold shadow hover:scale-105 transition-transform duration-100"
+          className="px-3 py-1.5 rounded-full text-xs font-semibold shadow hover:scale-105 duration-100"
+          style={{ color: palette.shade1, backgroundColor: palette.shade3 }}
         >
           {text}
         </span>

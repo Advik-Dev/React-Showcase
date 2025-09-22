@@ -1,6 +1,12 @@
+import { useColor } from "./Components/ColorContext/ColorContext";
+
 function DividerAlt({ text, subtext }) {
+  const { palette } = useColor();
   return (
-    <div className="relative w-full text-center mb-10 md:my-12 flex flex-col text-orange-200 text-shadow-lg">
+    <div
+      className="relative w-full text-center mb-10 md:my-12 flex flex-col text-shadow-lg"
+      style={{ color: palette.shade4 }}
+    >
       <hr className="border-2 m-2" />
       <h2 className="m-2 font-pacifico text-4xl md:text-6xl md:mx-30 z-10 relative">
         {text}

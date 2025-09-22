@@ -5,7 +5,8 @@ import Divider from "./Divider";
 import DividerAlt from "./DividerAlt";
 import Footer from "./Footer";
 import { ColorProvider } from "./Components/ColorContext/ColorProvider";
-// import { useColor } from "./Components/ColorContext/ColorContext";
+import { useColor } from "./Components/ColorContext/ColorContext";
+import BgGrid from "./BgGrid";
 
 function App() {
   return (
@@ -16,10 +17,14 @@ function App() {
 }
 
 function MainLayout() {
-  // const { primaryColor } = useColor();
+  const { palette } = useColor();
   return (
-    <div className="relative min-h-screen flex bg-orange-200 justify-center -z-20">
-      <div className="absolute transition-colors bg-orange-500 -z-10">
+    <div
+      className="relative transition-colors"
+      style={{ backgroundColor: palette.primary, color: palette.text }}
+    >
+      <BgGrid className="z-10 opacity-20" />
+      <div className="relative z-20">
         <Header />
         <Hero />
         <Divider text={"Components"} />

@@ -4,7 +4,6 @@ import { useColor } from "../../ColorContext/ColorContext.jsx";
 
 function ColorSelector() {
   const { _primaryColor, setPrimaryColor, palette } = useColor();
-  console.log(palette);
 
   // const [position, setPosition] = useState({ x: 0, y: 0 }); Implement Later Mouse Hover info
 
@@ -19,10 +18,11 @@ function ColorSelector() {
 
   return (
     <div
-      className="lg:min-w-140 md:min-w-100 flex flex-col justify-center transition-colors rounded-2xl h-auto items-center space-y-5"
+      className="lg:min-w-140 md:min-w-100 flex flex-col justify-center transition-colors rounded-2xl h-auto items-center space-y-5 border-4"
       style={{
         backgroundColor: palette.shade1,
         color: palette.text,
+        borderColor: palette.shade0,
       }}
     >
       <div
@@ -81,7 +81,10 @@ function ColorSelector() {
         </div>
       </div>
 
-      <div className="bg-amber-50 rounded-2xl flex flex-wrap justify-center items-center gap-3 p-3 sm:m-5 sm:mt-0">
+      <div
+        className="rounded-2xl flex flex-wrap justify-center items-center gap-3 p-3 sm:m-5 sm:mt-0"
+        style={{ backgroundColor: palette.shade2 }}
+      >
         {Object.entries(colorMap).map(([name, { bg, text }]) => (
           <Button
             color={bg}

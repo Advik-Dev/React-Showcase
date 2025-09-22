@@ -1,4 +1,6 @@
+import { useColor } from "../../ColorContext/ColorContext";
 function RangeSlider({ passwordLength, setPasswordLength }) {
+  const { palette } = useColor();
   const handleSliderChange = (e) => {
     setPasswordLength(e.target.value);
   };
@@ -11,6 +13,7 @@ function RangeSlider({ passwordLength, setPasswordLength }) {
       max="30"
       value={passwordLength}
       onChange={handleSliderChange}
+      style={{ accentColor: palette.shade4 }}
     ></input>
   );
 }

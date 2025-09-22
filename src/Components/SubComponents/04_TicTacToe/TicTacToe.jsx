@@ -12,8 +12,10 @@ import {
   nextBattleAfterWin,
   nextBattleAfterLoss,
 } from "./otherData";
+import { useColor } from "../../ColorContext/ColorContext";
 
 function TicTacToe() {
+  const { palette } = useColor();
   const indexes = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   const [playerX, setPlayerX] = useState(new Set());
@@ -116,7 +118,7 @@ function TicTacToe() {
       setResetBtnDisplay(false);
     });
 
-    console.log(gameCondition);
+    // console.log(gameCondition);
     if (gameCondition == "Xwins") {
       const rngNextRoundPhrase = randomFrom(nextBattleAfterLoss);
       setTitleText(rngNextRoundPhrase[0]);
@@ -137,9 +139,19 @@ function TicTacToe() {
   }
 
   return (
-    <div className="bg-gray-900 min-w-80 md:min-w-100 lg:min-w-140 rounded-2xl flex lg:flex-row flex-col items-center justify-center p-10 relative">
-      <div className="border-1 border-green-400 m-3">
-        <div className="grid grid-cols-3">
+    <div
+      className="bg-gray-900 min-w-80 md:min-w-100 lg:min-w-140 rounded-2xl flex lg:flex-row flex-col items-center justify-center p-10 relative border-4"
+      style={{
+        backgroundColor: palette.shade1,
+      }}
+    >
+      <div
+        className="border-2 m-3"
+        style={{
+          borderColor: palette.shade1,
+        }}
+      >
+        <div className="grid grid-cols-3 border-2">
           {indexes.map((value, index) => (
             <InputBox
               key={value}
@@ -162,10 +174,9 @@ function TicTacToe() {
 
         <button
           className={`
-            px-4 py-2 rounded-xl text-white bg-green-500
-            hover:bg-green-600 hover:ring-2 hover:ring-green-300
+            px-4 py-2 rounded-xl hover:ring-2
             active:scale-95 transition-all duration-300 ease-in-out
-            shadow-md hover:shadow-lg select-none
+            shadow-md select-none
             transform absolute bottom-5 right-5
             ${
               resetBtnDisplay
@@ -173,6 +184,11 @@ function TicTacToe() {
                 : "opacity-0 scale-90 pointer-events-none"
             }
           `}
+          style={{
+            backgroundColor: palette.shade3,
+            borderColor: palette.shade0,
+            color: palette.shade0,
+          }}
           onClick={handleResetClick}
         >
           Reset

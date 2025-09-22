@@ -29,7 +29,6 @@ function rgbToHex(r, g, b) {
 }
 
 // Adjust brightness by a percentage (-100 to +100)
-// Adjust brightness by a percentage (-100 to +100)
 function adjustColor(hex, percent) {
   const { r, g, b } = hexToRgb(hex);
 
@@ -54,7 +53,7 @@ function adjustColor(hex, percent) {
 function getContrastText(hex) {
   const { r, g, b } = hexToRgb(hex);
   const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-  return luminance > 0.6 ? "#000000" : "#FFFFFF";
+  return luminance > 0.1 ? "#000000" : "#FFFFFF";
 }
 
 // Main function
@@ -62,7 +61,8 @@ export function generatePalette(primaryColor) {
   const { r, g, b } = hexToRgb(primaryColor);
   const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
 
-  let shade1, shade2, shade3, shade4;
+  let shade1, shade2, shade3, shade4, shade0;
+  shade0 = adjustColor(primaryColor, -80); // strong darkening
 
   if (luminance >= 0.85) {
     // Very light → only darker
@@ -86,6 +86,7 @@ export function generatePalette(primaryColor) {
 
   return {
     primary: primaryColor,
+    shade0,
     shade1,
     shade2,
     shade3,

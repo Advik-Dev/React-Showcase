@@ -3,8 +3,10 @@ import CheckBox from "./CheckBox";
 import PasswdBar from "./PasswdBar";
 import RangeSlider from "./RangeSlider";
 import CrackTime from "./CrackTime";
+import { useColor } from "../../ColorContext/ColorContext";
 
 function PasswdGenerator() {
+  const { palette } = useColor();
   const [passwordLength, setPasswordLength] = useState(6);
   const [password, setPassword] = useState("");
 
@@ -54,7 +56,10 @@ function PasswdGenerator() {
   ]);
 
   return (
-    <div className="p-5 bg-gray-900 rounded-2xl flex justify-center items-center flex-col lg:min-w-140 md:min-w-100">
+    <div
+      className="p-5 rounded-2xl flex justify-center items-center flex-col lg:min-w-140 md:min-w-100 border-4"
+      style={{ backgroundColor: palette.shade1 }}
+    >
       <div className="flex m-3 w-[100%] justify-center items-center ">
         <PasswdBar password={password} />
       </div>
@@ -63,7 +68,7 @@ function PasswdGenerator() {
           passwordLength={passwordLength}
           setPasswordLength={setPasswordLength}
         />
-        <div className="flex flex-row gap-3">
+        <div className="flex flex-row gap-3 select-none">
           <CheckBox
             label="Numbers"
             checked={checkedItems.Numbers}
@@ -77,13 +82,28 @@ function PasswdGenerator() {
         </div>
         <div className="flex flex-row gap-6">
           <button
-            className="w-30 md:w-xs p-2 bg-blue-500 rounded-xl text-white hover:ring-2 hover:ring-blue-400 transition transform ease-in-out active:bg-blue-400 active:scale-95 active:transition-none"
+            className="w-30 md:w-xs p-2 transition transform ease-in-out rounded-2xl active:scale-97 active:transition-none"
             onClick={generatePassword}
+            style={{
+              backgroundColor: palette.shade3,
+              color: palette.shade0,
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.backgroundColor = palette.shade2)
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.backgroundColor = palette.shade3)
+            }
           >
             Generate New
           </button>
           <div className="flex justify-center">
-            <p className="text-blue-300 text-xl sm:text-3xl self-center justify-end">
+            <p
+              className="text-xl sm:text-3xl self-center justify-end"
+              style={{
+                color: palette.shade4,
+              }}
+            >
               Length : {passwordLength < 10 ? "0" : ""}
               {passwordLength}
             </p>

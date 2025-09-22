@@ -1,16 +1,32 @@
 export const colorMap = {
-  Red:      { bg: "#ef4444", text: "#ffffff" },  // Tailwind red-500
-  Green:    { bg: "#22c55e", text: "#ffffff" },  // Tailwind green-500
-  Blue:     { bg: "#3b82f6", text: "#ffffff" },  // Tailwind blue-500
-  Olive:    { bg: "#4d7c0f", text: "#ffffff" },  // Tailwind lime-800 (olive-like)
-  Gray:     { bg: "#9ca3af", text: "#000000" },  // Tailwind gray-400
-  Yellow:   { bg: "#eab308", text: "#000000" },  // Tailwind yellow-500
-  Pink:     { bg: "#ec4899", text: "#ffffff" },  // Tailwind pink-500
-  Purple:   { bg: "#7e22ce", text: "#ffffff" },  // Tailwind purple-700
-  Lavender: { bg: "#d8b4fe", text: "#000000" },  // Tailwind purple-300
-  White:    { bg: "#ffffff", text: "#000000" },  // Pure white
-  Black:    { bg: "#000000", text: "#ffffff" },  // Pure black
+  // Reds & Oranges
+  Red: { bg: "#ef4444", text: "#000000" },      // red-500
+  Orange: { bg: "#f97316", text: "#000000" },   // orange-500
+
+  // Greens
+  Emerald: { bg: "#10b981", text: "#000000" },  // emerald-500
+  Lime: { bg: "#84cc16", text: "#000000" },     // lime-500
+
+  // Blues & Teals
+  Blue: { bg: "#3b82f6", text: "#ffffff" },     // blue-500
+  Sky: { bg: "#0ea5e9", text: "#000000" },      // sky-500
+  Indigo: { bg: "#6366f1", text: "#ffffff" },   // indigo-500
+
+  // Purples & Pinks
+  Violet: { bg: "#8b5cf6", text: "#ffffff" },   // violet-500
+  Lavender: { bg: "#d8b4fe", text: "#000000" }, // purple-300
+  Pink: { bg: "#ec4899", text: "#000000" },     // pink-500
+
+  // Yellows & Warm
+  WarmYellow: { bg: "#facc15", text: "#000000" }, // yellow-400
+
+  // Neutrals
+  Slate: { bg: "#64748b", text: "#ffffff" },    // slate-600
+  DarkBrown: { bg: "#5c4033", text: "#ffffff" },   // dark chocolate brown
+  Black: { bg: "#000000", text: "#ffffff" },    // black
+
 };
+
 
 
 // export const bgClasses = [

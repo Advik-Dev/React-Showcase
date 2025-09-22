@@ -1,4 +1,6 @@
+import { useColor } from "../../ColorContext/ColorContext";
 function CrackTime({ passwordLength, checkedItems }) {
+  const { palette } = useColor();
   function formatTime(seconds) {
     if (seconds < 1) return "< 1 second";
 
@@ -38,9 +40,18 @@ function CrackTime({ passwordLength, checkedItems }) {
 
   return (
     <div className="w-full sm:h-15 p-2 sm:mb-3">
-      <div className="text-blue-300">
+      <div
+        style={{
+          color: palette.shade2,
+        }}
+      >
         Average time required to break the password: <br />
-        <span className="font-bold text-white">
+        <span
+          className="font-bold"
+          style={{
+            color: palette.shade4,
+          }}
+        >
           {calculateCrackTime(passwordLength, checkedItems)}
         </span>
       </div>
