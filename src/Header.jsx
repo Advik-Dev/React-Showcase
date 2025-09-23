@@ -8,7 +8,7 @@ function Header({ className }) {
       <HeaderSvg />
       <h1
         className="font-pacifico text-4xl sm:text-5xl md:text-7xl p-4 text-center w-full text-shadow-lg"
-        style={{ color: palette.text }}
+        style={{ color: palette.shade0 }}
       >
         My React.js Projects
       </h1>

@@ -21,7 +21,7 @@ function MainLayout() {
   return (
     <div
       className="relative transition-colors"
-      style={{ backgroundColor: palette.primary, color: palette.text }}
+      style={{ backgroundColor: palette.primary, color: palette.shade0 }}
     >
       <BgGrid className="z-10 opacity-20" />
       <div className="relative z-20">

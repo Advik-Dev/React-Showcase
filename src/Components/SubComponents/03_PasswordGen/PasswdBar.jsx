@@ -20,7 +20,7 @@ function PasswdBar({ password }) {
         value={password}
         readOnly={true}
         className=" w-[100%] h-10 rounded-l-2xl px-3 focus:outline-none focus:ring-0 focus:border-transparent"
-        style={{ backgroundColor: palette.shade4, color: palette.shade1 }}
+        style={{ backgroundColor: palette.shade4, color: palette.shade0 }}
       />
       {isCopied ? (
         <Sidebutton label="Copied" etc="bg-gray-500" onClick={null} />

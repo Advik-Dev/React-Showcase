@@ -5,13 +5,13 @@ function Sidebutton({ label = "click", etc, onClick }) {
   return (
     <button
       className="w-18 text-center h-10 rounded-r-2xl"
-      style={{ color: palette.shade0, backgroundColor: palette.shade3 }}
+      style={{ color: palette.shade3, backgroundColor: palette.shade1 }}
       onClick={onClick}
       onMouseEnter={(e) =>
-        (e.currentTarget.style.backgroundColor = palette.shade2)
+        (e.currentTarget.style.backgroundColor = palette.shade0)
       }
       onMouseLeave={(e) =>
-        (e.currentTarget.style.backgroundColor = palette.shade3)
+        (e.currentTarget.style.backgroundColor = palette.shade1)
       }
     >
       {label}

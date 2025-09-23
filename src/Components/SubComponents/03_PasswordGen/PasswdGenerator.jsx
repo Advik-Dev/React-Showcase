@@ -58,7 +58,7 @@ function PasswdGenerator() {
   return (
     <div
       className="p-5 rounded-2xl flex justify-center items-center flex-col lg:min-w-140 md:min-w-100 border-4"
-      style={{ backgroundColor: palette.shade1 }}
+      style={{ backgroundColor: palette.shade2 }}
     >
       <div className="flex m-3 w-[100%] justify-center items-center ">
         <PasswdBar password={password} />
@@ -82,18 +82,13 @@ function PasswdGenerator() {
         </div>
         <div className="flex flex-row gap-6">
           <button
-            className="w-30 md:w-xs p-2 transition transform ease-in-out rounded-2xl active:scale-97 active:transition-none"
+            className="w-30 md:w-xs p-2 transition transform ease-in-out rounded-2xl active:scale-97 active:transition-none focus:outline-none hover:ring-2"
             onClick={generatePassword}
             style={{
-              backgroundColor: palette.shade3,
+              backgroundColor: palette.shade4,
               color: palette.shade0,
+              "--tw-ring-color": palette.shade0,
             }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.backgroundColor = palette.shade2)
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.backgroundColor = palette.shade3)
-            }
           >
             Generate New
           </button>
@@ -101,7 +96,7 @@ function PasswdGenerator() {
             <p
               className="text-xl sm:text-3xl self-center justify-end"
               style={{
-                color: palette.shade4,
+                color: palette.shade0,
               }}
             >
               Length : {passwordLength < 10 ? "0" : ""}

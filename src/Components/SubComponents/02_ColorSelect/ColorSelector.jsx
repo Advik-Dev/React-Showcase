@@ -21,20 +21,20 @@ function ColorSelector() {
       className="lg:min-w-140 md:min-w-100 flex flex-col justify-center transition-colors rounded-2xl h-auto items-center space-y-5 border-4"
       style={{
         backgroundColor: palette.shade1,
-        color: palette.text,
+        color: palette.shade0,
         borderColor: palette.shade0,
       }}
     >
       <div
         className="w-10/11 sm:w-96 rounded-2xl shadow p-5 m-5"
-        style={{ backgroundColor: palette.shade2, color: palette.text }}
+        style={{ backgroundColor: palette.shade2, color: palette.shade0 }}
       >
         <div className="flex flex-row gap-4 items-start">
           <div
             className="w-24 h-24 rounded-lg"
             style={{
               backgroundColor: palette.shade4,
-              color: palette.text,
+              color: palette.shade0,
             }}
           ></div>
 
@@ -43,21 +43,21 @@ function ColorSelector() {
               className="h-8 rounded-md"
               style={{
                 backgroundColor: palette.shade4,
-                color: palette.text,
+                color: palette.shade0,
               }}
             ></div>
             <div
               className="h-4 rounded-full bg-gray-200 w-full"
               style={{
                 backgroundColor: palette.shade3,
-                color: palette.text,
+                color: palette.shade0,
               }}
             ></div>
             <div
               className="h-4 rounded-full bg-gray-200 w-5/6"
               style={{
                 backgroundColor: palette.shade3,
-                color: palette.text,
+                color: palette.shade0,
               }}
             ></div>
           </div>
@@ -68,14 +68,14 @@ function ColorSelector() {
             className="h-4 rounded-full bg-gray-200 w-full"
             style={{
               backgroundColor: palette.shade3,
-              color: palette.text,
+              color: palette.shade0,
             }}
           ></div>
           <div
             className="h-4 rounded-full bg-gray-200 w-2/3"
             style={{
               backgroundColor: palette.shade3,
-              color: palette.text,
+              color: palette.shade0,
             }}
           ></div>
         </div>

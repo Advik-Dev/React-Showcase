@@ -8,7 +8,7 @@ function Tile({ tileID, type }) {
     <div
       id={tileID}
       className="w-5 h-5 border-1 opacity-10"
-      style={{ borderColor: palette.shade4 }}
+      style={{ borderColor: palette.shade0 }}
     ></div>
   );
 
@@ -24,7 +24,8 @@ function Tile({ tileID, type }) {
     tile = (
       <div
         id={tileID}
-        className="w-5 h-5 border-1 border-red-500 bg-red-500"
+        className="w-5 h-5 border-1"
+        style={{ borderColor: palette.shade2, backgroundColor: palette.shade2 }}
       ></div>
     );
   }

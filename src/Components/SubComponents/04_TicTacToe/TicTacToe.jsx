@@ -142,16 +142,16 @@ function TicTacToe() {
     <div
       className="bg-gray-900 min-w-80 md:min-w-100 lg:min-w-140 rounded-2xl flex lg:flex-row flex-col items-center justify-center p-10 relative border-4"
       style={{
-        backgroundColor: palette.shade1,
+        backgroundColor: palette.shade2,
       }}
     >
-      <div
-        className="border-2 m-3"
-        style={{
-          borderColor: palette.shade1,
-        }}
-      >
-        <div className="grid grid-cols-3 border-2">
+      <div className=" m-3">
+        <div
+          className="grid grid-cols-3 border-2"
+          style={{
+            borderColor: palette.shade0,
+          }}
+        >
           {indexes.map((value, index) => (
             <InputBox
               key={value}
@@ -185,9 +185,9 @@ function TicTacToe() {
             }
           `}
           style={{
-            backgroundColor: palette.shade3,
+            backgroundColor: palette.shade1,
             borderColor: palette.shade0,
-            color: palette.shade0,
+            color: palette.shade4,
           }}
           onClick={handleResetClick}
         >

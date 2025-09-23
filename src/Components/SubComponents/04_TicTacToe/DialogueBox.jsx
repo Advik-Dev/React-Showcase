@@ -28,8 +28,8 @@ function DialogueBox({ text }) {
     <div
       className="w-11/12 max-w-3xl rounded-xl px-6 shadow-xl text-center text-xl font-semibold justify-center border-2"
       style={{
-        backgroundColor: palette.shade3,
-        color: palette.shade0,
+        backgroundColor: palette.shade0,
+        color: palette.shade4,
         borderColor: palette.shade0,
       }}
     >

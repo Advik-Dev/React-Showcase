@@ -192,12 +192,12 @@ function Snake() {
 
   return (
     <div
-      className="min-w-80 md:min-w-100 lg:min-w-140 rounded-2xl flex lg:flex-row flex-col items-center justify-center relative"
-      style={{ backgroundColor: palette.shade0 }}
+      className="min-w-80 md:min-w-100 lg:min-w-140 rounded-2xl flex lg:flex-row flex-col items-center justify-center relative border-4"
+      style={{ backgroundColor: palette.shade2, borderColor: palette.shade0 }}
     >
       <div
-        className="border-3 md:m-10 m-4"
-        style={{ borderColor: palette.shade3 }}
+        className="border-3 md:m-10 m-4 shadow-inner"
+        style={{ borderColor: palette.shade0, backgroundColor: palette.shade1 }}
       >
         <div className="grid grid-cols-15">
           {tiles.flat().map((type, index) => (
@@ -208,10 +208,13 @@ function Snake() {
       <div className="flex mb-5 md:items-center flex-col items-center text-center">
         <div
           className="mb-5 font-bold text-4xl"
-          style={{ color: palette.shade3 }}
+          style={{ color: palette.shade0 }}
         >
           - {score} -
-          <div className="text-gray-500 text-sm text-center">
+          <div
+            className="text-sm text-center"
+            style={{ color: palette.shade0 }}
+          >
             High Score - {localStorage.getItem("snakeHS") || 0}
           </div>
         </div>
@@ -222,17 +225,18 @@ function Snake() {
             active:scale-95 transition-all duration-300 ease-in-out
             shadow-md hover:shadow-lg select-none
             transform absolute bottom-5 right-5
+            focus:outline-none
             ${gameRunning.current ? "scale-0" : "scale-100"}
           `}
           style={{
-            color: palette.shade0,
-            backgroundColor: palette.shade3,
+            color: palette.shade4,
+            backgroundColor: palette.shade1,
           }}
           onMouseEnter={(e) =>
-            (e.currentTarget.style.backgroundColor = palette.shade2)
+            (e.currentTarget.style.backgroundColor = palette.shade0)
           }
           onMouseLeave={(e) =>
-            (e.currentTarget.style.backgroundColor = palette.shade3)
+            (e.currentTarget.style.backgroundColor = palette.shade1)
           }
           onClick={startGame}
         >

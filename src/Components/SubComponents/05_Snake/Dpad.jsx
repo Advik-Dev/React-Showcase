@@ -8,14 +8,14 @@ function Dpad({ setDirection }) {
       {/* Row 1 */}
       <div></div>
       <button
-        className="w-full h-full rounded-t-sm flex items-center justify-center text-xl transition duration-200 ease-in-out transform hover:ring-2 hover:ring-black active:scale-95 active:transition-none font-bold
+        className="w-full h-full rounded-t-sm flex items-center justify-center text-xl transition duration-200 ease-in-out transform active:scale-95 active:transition-none font-bold
         [clip-path:polygon(0.5rem_0,calc(100%-0rem)_0,100%_0.5rem,100%_calc(100%-0.5rem),calc(100%-0.5rem)_100%,0.5rem_100%,0_calc(100%-0.5rem),0_0rem)]"
-        style={{ backgroundColor: palette.shade3 }}
+        style={{ backgroundColor: palette.shade1 }}
         onMouseEnter={(e) =>
-          (e.currentTarget.style.backgroundColor = palette.shade2)
+          (e.currentTarget.style.backgroundColor = palette.shade0)
         }
         onMouseLeave={(e) =>
-          (e.currentTarget.style.backgroundColor = palette.shade3)
+          (e.currentTarget.style.backgroundColor = palette.shade1)
         }
         onClick={() => setDirection("north")}
       ></button>
@@ -23,28 +23,28 @@ function Dpad({ setDirection }) {
 
       {/* Row 2 */}
       <button
-        className="w-full h-full rounded-l-sm flex items-center justify-center text-xl transition duration-200 ease-in-out transform hover:ring-2 hover:ring-black active:scale-95 active:transition-none font-bold
+        className="w-full h-full rounded-l-sm flex items-center justify-center text-xl transition duration-200 ease-in-out transform active:scale-95 active:transition-none font-bold
         [clip-path:polygon(0.5rem_0,calc(100%-0.5rem)_0,100%_0.5rem,100%_calc(100%-0.5rem),calc(100%-0.5rem)_100%,0rem_100%,0_calc(100%-0.5rem),0_0rem)]"
-        style={{ backgroundColor: palette.shade3 }}
+        style={{ backgroundColor: palette.shade1 }}
         onMouseEnter={(e) =>
-          (e.currentTarget.style.backgroundColor = palette.shade2)
+          (e.currentTarget.style.backgroundColor = palette.shade0)
         }
         onMouseLeave={(e) =>
-          (e.currentTarget.style.backgroundColor = palette.shade3)
+          (e.currentTarget.style.backgroundColor = palette.shade1)
         }
         onClick={() => setDirection("west")}
       ></button>
       {/* <div className="w-full h-full  rounded-2xl bg-green-400 flex items-center justify-center text-xl cursor-default"></div> */}
       <div className="w-0 h-0 [clip-path:polygon(0.5rem_0,calc(100%-0.5rem)_0,100%_0.5rem,100%_calc(100%-0.5rem),calc(100%-0.5rem)_100%,0.5rem_100%,0_calc(100%-0.5rem),0_0.5rem)] bg-green-400 flex items-center justify-center text-xl cursor-default"></div>
       <button
-        className="w-full h-full rounded-r-sm flex items-center justify-center text-xl transition duration-200 ease-in-out transform hover:ring-2 hover:ring-black active:scale-95 active:transition-none font-bold
+        className="w-full h-full rounded-r-sm flex items-center justify-center text-xl transition duration-200 ease-in-out transform active:scale-95 active:transition-none font-bold
                 [clip-path:polygon(0.5rem_0,calc(100%-0rem)_0,100%_0.5rem,100%_calc(100%-0rem),calc(100%-0.5rem)_100%,0.5rem_100%,0_calc(100%-0.5rem),0_0.5rem)]"
-        style={{ backgroundColor: palette.shade3 }}
+        style={{ backgroundColor: palette.shade1 }}
         onMouseEnter={(e) =>
-          (e.currentTarget.style.backgroundColor = palette.shade2)
+          (e.currentTarget.style.backgroundColor = palette.shade0)
         }
         onMouseLeave={(e) =>
-          (e.currentTarget.style.backgroundColor = palette.shade3)
+          (e.currentTarget.style.backgroundColor = palette.shade1)
         }
         onClick={() => setDirection("east")}
       ></button>
@@ -52,14 +52,14 @@ function Dpad({ setDirection }) {
       {/* Row 3 */}
       <div></div>
       <button
-        className="w-full h-full rounded-b-sm flex items-center justify-center text-xl transition duration-200 ease-in-out transform hover:ring-2 hover:ring-black active:scale-95 active:transition-none font-bold
+        className="w-full h-full rounded-b-sm flex items-center justify-center text-xl transition duration-200 ease-in-out transform active:scale-95 active:transition-none font-bold
         [clip-path:polygon(0.5rem_0,calc(100%-0.5rem)_0,100%_0.5rem,100%_calc(100%-0rem),calc(100%-0.5rem)_100%,0rem_100%,0_calc(100%-0.5rem),0_0.5rem)]"
-        style={{ backgroundColor: palette.shade3 }}
+        style={{ backgroundColor: palette.shade1 }}
         onMouseEnter={(e) =>
-          (e.currentTarget.style.backgroundColor = palette.shade2)
+          (e.currentTarget.style.backgroundColor = palette.shade0)
         }
         onMouseLeave={(e) =>
-          (e.currentTarget.style.backgroundColor = palette.shade3)
+          (e.currentTarget.style.backgroundColor = palette.shade1)
         }
         onClick={() => setDirection("south")}
       ></button>

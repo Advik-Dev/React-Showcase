@@ -42,14 +42,14 @@ function CrackTime({ passwordLength, checkedItems }) {
     <div className="w-full sm:h-15 p-2 sm:mb-3">
       <div
         style={{
-          color: palette.shade2,
+          color: palette.shade0,
         }}
       >
         Average time required to break the password: <br />
         <span
           className="font-bold"
           style={{
-            color: palette.shade4,
+            color: palette.shade0,
           }}
         >
           {calculateCrackTime(passwordLength, checkedItems)}

@@ -13,7 +13,7 @@ function RangeSlider({ passwordLength, setPasswordLength }) {
       max="30"
       value={passwordLength}
       onChange={handleSliderChange}
-      style={{ accentColor: palette.shade4 }}
+      style={{ accentColor: palette.shade1 }}
     ></input>
   );
 }

@@ -25,7 +25,7 @@ function Card({
       <div className="text-center md:text-left flex-1 p-3 rounded-2xl">
         <h2
           className="w-max text-2xl md:text-3xl font-bold mb-3 rounded-xl p-3 mx-auto md:mx-0 text-center md:text-left"
-          style={{ backgroundColor: palette.shade4, color: palette.shade1 }}
+          style={{ backgroundColor: palette.shade4, color: palette.shade0 }}
         >
           <span className="font-bold" style={{ color: palette.shade1 }}>
             //:{" "}
