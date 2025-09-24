@@ -1,28 +1,18 @@
 export const colorMap = {
-  // Reds & Oranges
-  Red: { bg: "#ef4444", text: "#000000" },      // red-500
-  Orange: { bg: "#f97316", text: "#000000" },   // orange-500
-
-  // Greens
-  Emerald: { bg: "#10b981", text: "#000000" },  // emerald-500
-  Lime: { bg: "#84cc16", text: "#000000" },     // lime-500
-
-  // Blues & Teals
-  Blue: { bg: "#3b82f6", text: "#ffffff" },     // blue-500
-  Sky: { bg: "#0ea5e9", text: "#000000" },      // sky-500
-  Indigo: { bg: "#6366f1", text: "#ffffff" },   // indigo-500
-
-  // Purples & Pinks
-  Violet: { bg: "#8b5cf6", text: "#ffffff" },   // violet-500
-  Lavender: { bg: "#d8b4fe", text: "#000000" }, // purple-300
-  Pink: { bg: "#ec4899", text: "#000000" },     // pink-500
-
-  // Yellows & Warm
-  WarmYellow: { bg: "#facc15", text: "#000000" }, // yellow-400
-
-  // Neutrals
-  Slate: { bg: "#64748b", text: "#ffffff" },    // slate-600
+  Red: { bg: "#ff1f3c", text: "#ffffff" },
+  Orange: { bg: "#ff6b00", text: "#ffffff" },
+  Emerald: { bg: "#00c878", text: "#ffffff" },
+  Lime: { bg: "#b6ff00", text: "#000000" },
+  Blue: { bg: "#1e90ff", text: "#ffffff" },
+  Sky: { bg: "#00bfff", text: "#000000" },
+  Indigo: { bg: "#4b00ff", text: "#ffffff" },
+  Violet: { bg: "#9f00ff", text: "#ffffff" },
+  Lavender: { bg: "#e066ff", text: "#000000" },
+  Pink: { bg: "#ff1493", text: "#ffffff" },
+  WarmYellow: { bg: "#ffd700", text: "#000000" },
+  Slate: { bg: "#3a506b", text: "#ffffff" },
 };
+
 
 
 

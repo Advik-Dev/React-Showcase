@@ -57,28 +57,8 @@ export function generatePalette(primaryColor, theme = "dark") {
   let shade1, shade2, shade3, shade4, shade0;
   shade0 = adjustColor(primaryColor, -90); // strong darkening
 
-  // if (luminance >= 0.85) {
-  //   // Very light → only darker
-  //   shade1 = adjustColor(primaryColor, -40);
-  //   shade2 = adjustColor(primaryColor, -60);
-  //   shade3 = adjustColor(primaryColor, -80);
-  //   shade4 = adjustColor(primaryColor, -100);
-  // } else if (luminance <= 0.15) {
-  //   // Very dark → only lighter
-  //   shade1 = adjustColor(primaryColor, 40);
-  //   shade2 = adjustColor(primaryColor, 60);
-  //   shade3 = adjustColor(primaryColor, 80);
-  //   shade4 = adjustColor(primaryColor, 100);
-  // } else {
-  //   // Mid-tone → mix
-  //   shade1 = adjustColor(primaryColor, -50);
-  //   shade2 = adjustColor(primaryColor, 40);
-  //   shade3 = adjustColor(primaryColor, 60);
-  //   shade4 = adjustColor(primaryColor, 80);
-  // }
-
   shade1 = adjustColor(primaryColor, -50);
-  shade2 = adjustColor(primaryColor, 40);
+  shade2 = adjustColor(primaryColor, 30);
   shade3 = adjustColor(primaryColor, 60);
   shade4 = adjustColor(primaryColor, 90);
   // shade4 = "#FFFFFF";
@@ -87,11 +67,11 @@ export function generatePalette(primaryColor, theme = "dark") {
   let bgBase = theme === "dark" ? "#000000" : "#FFFFFF";
   let text = theme === "dark" ? "#FFFFFF" : "#000000";
   let bgshade0 = theme === "dark" ? "#0A0A0A" : 0;
-  let bgshade1 = theme === "dark" ? "#171717" : -10;
-  let bgshade2 = theme === "dark" ? "#202020" : -20;
-  let bgshade3 = theme === "dark" ? "#282828" : -50;
-  let bgshade4 = theme === "dark" ? "#383838" : -50;
-  let bordershade = theme === "dark" ? "#3C3C3C" : 1;
+  let bgshade1 = theme === "dark" ? "#171717" : 0;
+  let bgshade2 = theme === "dark" ? "#202020" : 0;
+  let bgshade3 = theme === "dark" ? "#282828" : 0;
+  let bgshade4 = theme === "dark" ? "#383838" : 0;
+  let bordershade = theme === "dark" ? "#3C3C3C" : 0;
 
   return {
     primary: primaryColor,
@@ -107,5 +87,6 @@ export function generatePalette(primaryColor, theme = "dark") {
     bgshade4,
     bordershade,
     text,
+    bgBase,
   };
 }

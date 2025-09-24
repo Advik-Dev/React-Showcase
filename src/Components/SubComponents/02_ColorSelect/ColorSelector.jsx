@@ -18,7 +18,7 @@ function ColorSelector() {
 
   return (
     <div
-      className="lg:min-w-140 md:min-w-100 flex flex-col justify-center transition-colors rounded-2xl h-auto items-center space-y-5 border-2"
+      className="flex flex-col justify-center transition-colors rounded-2xl h-auto items-center space-y-5 border-2"
       style={{
         backgroundColor: palette.bgshade1,
         color: palette.shade0,
@@ -26,7 +26,7 @@ function ColorSelector() {
       }}
     >
       <div
-        className="w-10/11 sm:w-96 rounded-2xl shadow p-5 m-5"
+        className="w-10/11 rounded-2xl shadow p-5 m-5"
         style={{ backgroundColor: palette.bgshade3 }}
       >
         <div className="flex flex-row gap-4 items-start">

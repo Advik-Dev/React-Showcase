@@ -18,7 +18,7 @@ function InfoCard() {
 
   return (
     <div
-      className={`absolute top-5 right-5 select-none transition-colors duration-300 ${
+      className={`opacity-0 md:opacity-100 absolute top-5 right-5 select-none transition-colors duration-300 ${
         disabled
           ? "text-gray-600"
           : "text-gray-500 cursor-pointer hover:text-gray-600"

@@ -14,7 +14,10 @@ function Hero() {
         }}
       >
         <div className="flex flex-col gap-4 text-center md:text-left md:w-10/12 transition-all duration-300">
-          <h2 className="text-3xl md:text-4xl font-extrabold drop-shadow-sm transition-transform duration-300">
+          <h2
+            className="text-3xl md:text-4xl font-extrabold drop-shadow-sm transition-transform duration-300"
+            style={{ color: palette.shade2 }}
+          >
             👋 Hey There!!
           </h2>
           <p className="text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0">
