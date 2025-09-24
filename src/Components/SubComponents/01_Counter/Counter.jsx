@@ -16,7 +16,7 @@ function Counter() {
 
   return (
     <div
-      className="flex flex-col justify-center h-1/2 rounded-2xl border-2"
+      className="flex flex-col justify-center rounded-2xl border-2"
       style={{
         backgroundColor: palette.bgshade1,
         borderColor: palette.bordershade,
