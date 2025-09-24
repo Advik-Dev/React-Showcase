@@ -7,8 +7,8 @@ function Tile({ tileID, type }) {
   let tile = (
     <div
       id={tileID}
-      className="w-5 h-5 border-1 opacity-10"
-      style={{ borderColor: palette.shade0 }}
+      className="w-5 h-5 border-1 opacity-20"
+      style={{ borderColor: palette.bgshade4 }}
     ></div>
   );
 
@@ -17,15 +17,15 @@ function Tile({ tileID, type }) {
       <div
         id={tileID}
         className="w-5 h-5 border-1"
-        style={{ borderColor: palette.shade3, backgroundColor: palette.shade3 }}
+        style={{ borderColor: palette.shade2, backgroundColor: palette.shade2 }}
       ></div>
     );
   } else if (type == 2) {
     tile = (
       <div
         id={tileID}
-        className="w-5 h-5 border-1"
-        style={{ borderColor: palette.shade2, backgroundColor: palette.shade2 }}
+        className="w-5 h-5 border-1 bg-red-500 border-red-500"
+        // style={{ borderColor: palette.shade2, backgroundColor: palette.shade2 }}
       ></div>
     );
   }

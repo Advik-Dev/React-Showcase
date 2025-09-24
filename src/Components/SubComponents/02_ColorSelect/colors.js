@@ -22,9 +22,6 @@ export const colorMap = {
 
   // Neutrals
   Slate: { bg: "#64748b", text: "#ffffff" },    // slate-600
-  DarkBrown: { bg: "#5c4033", text: "#ffffff" },   // dark chocolate brown
-  Black: { bg: "#000000", text: "#ffffff" },    // black
-
 };
 
 

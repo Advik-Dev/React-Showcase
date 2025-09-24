@@ -6,8 +6,8 @@ function Bubbles({ bubbleArray }) {
       {bubbleArray.map((text, index) => (
         <span
           key={index}
-          className="px-3 py-1.5 rounded-full text-xs font-semibold shadow hover:scale-105 duration-100"
-          style={{ color: palette.shade1, backgroundColor: palette.shade3 }}
+          className="px-3 py-1.5 rounded-full text-xs shadow hover:scale-105 duration-100"
+          style={{ color: palette.shade4, backgroundColor: palette.bgshade4 }}
         >
           {text}
         </span>

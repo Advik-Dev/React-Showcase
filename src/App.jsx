@@ -21,9 +21,9 @@ function MainLayout() {
   return (
     <div
       className="relative transition-colors"
-      style={{ backgroundColor: palette.primary, color: palette.shade0 }}
+      style={{ backgroundColor: palette.bgshade0, color: palette.shade0 }}
     >
-      <BgGrid className="z-10 opacity-20" />
+      <BgGrid className="z-10 opacity-15" />
       <div className="relative z-20">
         <Header />
         <Hero />

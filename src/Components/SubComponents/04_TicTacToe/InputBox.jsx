@@ -52,9 +52,9 @@ const InputBox = forwardRef(function InputBox(
       disabled={isDisabled}
       className="h-15 w-15 border-2 text-5xl font-geo"
       style={{
-        backgroundColor: palette.shade3,
-        borderColor: palette.shade0,
-        color: palette.shade0,
+        backgroundColor: palette.bgshade2,
+        borderColor: palette.bgshade4,
+        color: palette.shade2,
       }}
     >
       {buttonVal}

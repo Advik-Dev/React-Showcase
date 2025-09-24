@@ -10,15 +10,15 @@ function BgGrid({ className }) {
         backgroundImage: `
       repeating-linear-gradient(
         45deg,
-        ${palette.shade4} 0,
-        ${palette.shade4} 1px,
+        ${palette.shade2} 0,
+        ${palette.shade2} 1px,
         transparent 1px,
         transparent 25px
       ),
       repeating-linear-gradient(
         -45deg,
-        ${palette.shade4} 0,
-        ${palette.shade4} 1px,
+        ${palette.shade2} 0,
+        ${palette.shade2} 1px,
         transparent 1px,
         transparent 25px
       )

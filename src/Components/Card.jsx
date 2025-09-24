@@ -17,23 +17,27 @@ function Card({
   console.log(palette);
   return (
     <div
-      className="m-3 md:m-10 lg:mx-40 flex flex-col md:flex-row items-center rounded-2xl shadow-md hover:shadow-lg duration-300 p-6 space-y-6 md:space-y-0 md:space-x-10 relative"
+      className="m-3 md:m-10 lg:mx-40 flex flex-col md:flex-row items-center rounded-2xl shadow-md hover:shadow-lg duration-300 p-6 space-y-6 md:space-y-0 md:space-x-10 relative border-2"
       style={{
-        background: `linear-gradient(-350deg, ${palette.shade2}, ${palette.shade4})`,
+        background: `linear-gradient(-350deg, ${palette.bgshade1}, ${palette.bgshade3})`,
+        borderColor: palette.bordershade,
       }}
     >
       <div className="text-center md:text-left flex-1 p-3 rounded-2xl">
         <h2
           className="w-max text-2xl md:text-3xl font-bold mb-3 rounded-xl p-3 mx-auto md:mx-0 text-center md:text-left"
-          style={{ backgroundColor: palette.shade4, color: palette.shade0 }}
+          style={{ backgroundColor: palette.bgshade4, color: palette.shade4 }}
         >
-          <span className="font-bold" style={{ color: palette.shade1 }}>
+          <span className="font-bold" style={{ color: palette.shade2 }}>
             //:{" "}
           </span>
           {title}
         </h2>
 
-        <p className="text-base md:text-lg leading-relaxed">
+        <p
+          className="text-base md:text-lg leading-relaxed"
+          style={{ color: palette.shade4 }}
+        >
           {description}
           {customInsert}
         </p>
@@ -47,7 +51,7 @@ function Card({
         )}
         <p
           className="text-sm mt-2 mb-1 ml-1 "
-          style={{ color: palette.shade1 }}
+          style={{ color: palette.shade2 }}
         >
           Stuff I learned while making this -
         </p>

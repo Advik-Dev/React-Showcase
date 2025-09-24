@@ -140,16 +140,17 @@ function TicTacToe() {
 
   return (
     <div
-      className="bg-gray-900 min-w-80 md:min-w-100 lg:min-w-140 rounded-2xl flex lg:flex-row flex-col items-center justify-center p-10 relative border-4"
+      className="bg-gray-900 min-w-80 md:min-w-100 lg:min-w-140 rounded-2xl flex lg:flex-row flex-col items-center justify-center p-10 relative border-2"
       style={{
-        backgroundColor: palette.shade2,
+        backgroundColor: palette.bgshade1,
+        borderColor: palette.bordershade,
       }}
     >
       <div className=" m-3">
         <div
           className="grid grid-cols-3 border-2"
           style={{
-            borderColor: palette.shade0,
+            borderColor: palette.bgshade4,
           }}
         >
           {indexes.map((value, index) => (
@@ -174,7 +175,7 @@ function TicTacToe() {
 
         <button
           className={`
-            px-4 py-2 rounded-xl hover:ring-2
+            px-4 py-2 rounded-xl
             active:scale-95 transition-all duration-300 ease-in-out
             shadow-md select-none
             transform absolute bottom-5 right-5
@@ -185,10 +186,15 @@ function TicTacToe() {
             }
           `}
           style={{
-            backgroundColor: palette.shade1,
-            borderColor: palette.shade0,
-            color: palette.shade4,
+            color: palette.shade0,
+            backgroundColor: palette.shade2,
           }}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.backgroundColor = palette.shade1)
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.backgroundColor = palette.shade2)
+          }
           onClick={handleResetClick}
         >
           Reset

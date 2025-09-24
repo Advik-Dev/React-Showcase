@@ -10,15 +10,23 @@ function Footer() {
       <div
         className="w-full h-[5vh] relative"
         style={{
-          backgroundColor: palette.shade3,
+          backgroundColor: palette.bgshade2,
         }}
       >
         <div
-          className="absolute right-0 left-0 bottom-full z-10 h-[60px]"
+          className="absolute right-0 left-0 bottom-full z-20 h-[60px]"
           style={{
             backgroundSize: "60px 100%",
             backgroundPosition: "0 0",
-            backgroundImage: `linear-gradient(45deg, ${palette.shade3} 25%, transparent 25%), linear-gradient(315deg, ${palette.shade3}  25%, transparent 25%)`,
+            backgroundImage: `linear-gradient(45deg, ${palette.bgshade2} 25%, transparent 25%), linear-gradient(315deg, ${palette.bgshade2}  25%, transparent 25%)`,
+          }}
+        ></div>
+        <div
+          className="absolute right-0 left-0 bottom-full z-10 h-[65px]"
+          style={{
+            backgroundSize: "60px 100%",
+            backgroundPosition: "0 0",
+            backgroundImage: `linear-gradient(45deg, ${palette.shade2} 25%, transparent 25%), linear-gradient(315deg, ${palette.shade2}  25%, transparent 25%)`,
           }}
         ></div>
       </div>
@@ -26,7 +34,8 @@ function Footer() {
       <div
         className="flex flex-col md:flex-row justify-around py-5 md:pb-10 p-1 md:p-3"
         style={{
-          backgroundColor: palette.shade3,
+          backgroundColor: palette.bgshade2,
+          color: palette.shade2,
         }}
       >
         <div className="flex items-center lg:grid lg:grid-cols-3 grid-rows-2 min-w-70 md:min-w-120 mb-3 self-center">
@@ -42,27 +51,15 @@ function Footer() {
           ❝ Reinventing the wheel
           <br /> to learn the process of invention. ❞
         </div>
-        <div
-          className="h-20 rounded-2xl m-3 p-5 px-3 flex flex-row justify-center items-center gap-3"
-          style={{ backgroundColor: palette.shade2 }}
-        >
+        <div className="h-20 rounded-2xl m-3 p-5 px-3 flex flex-row justify-center items-center gap-3">
           <a href="https://github.com/Advik-Dev" target="_blank">
-            <FaGithub
-              className="h-12 w-auto rounded-xl p-1 hover:ring-4 transition ease-in-out"
-              style={{ backgroundColor: palette.shade3 }}
-            />
+            <FaGithub className="h-12 w-auto rounded-xl p-1 hover:ring-4 transition ease-in-out" />
           </a>
           <a href="https://x.com/AdvikDev" target="_blank">
-            <FaTwitter
-              className="h-12 w-auto rounded-xl p-1 hover:ring-4 transition ease-in-out"
-              style={{ backgroundColor: palette.shade3 }}
-            />
+            <FaTwitter className="h-12 w-auto rounded-xl p-1 hover:ring-4 transition ease-in-out" />
           </a>
           <a href="mailto:AdvikDev@proton.me">
-            <IoMdMail
-              className="h-12 w-auto rounded-xl p-1 hover:ring-4 transition ease-in-out"
-              style={{ backgroundColor: palette.shade3 }}
-            />
+            <IoMdMail className="h-12 w-auto rounded-xl p-1 hover:ring-4 transition ease-in-out" />
           </a>
         </div>
       </div>

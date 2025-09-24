@@ -5,7 +5,7 @@ function Divider({ text }) {
   return (
     <div
       className="relative w-full text-center mb-10 md:text-start md:my-12 flex flex-col text-shadow-lg"
-      style={{ color: palette.shade4 }}
+      style={{ color: palette.shade2 }}
     >
       <h2 className="font-pacifico text-5xl md:text-6xl md:mx-30 z-10 relative">
         {text}
