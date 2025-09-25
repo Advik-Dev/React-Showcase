@@ -60,7 +60,7 @@ export function generatePalette(primaryColor, theme = "dark") {
   shade1 = adjustColor(primaryColor, -50);
   shade2 = adjustColor(primaryColor, 30);
   shade3 = adjustColor(primaryColor, 60);
-  shade4 = adjustColor(primaryColor, 90);
+  shade4 = adjustColor(primaryColor, 95);
   // shade4 = "#FFFFFF";
 
   // Background shades (theme-based)

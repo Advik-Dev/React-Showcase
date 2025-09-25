@@ -10,7 +10,7 @@ function Hero() {
         <div
           className="rounded-3xl hover:shadow-lg transition-shadow duration-500 flex flex-col md:flex-row items-center p-8 md:p-12 space-y-8 md:space-y-0 md:space-x-10 w-full border-2"
           style={{
-            background: `linear-gradient(-350deg, ${palette.bgshade1}, ${palette.bgshade3})`,
+            background: `linear-gradient(-320deg, ${palette.bgshade2} 50%, ${palette.shade3} 500%)`,
             borderColor: palette.bordershade,
             color: palette.shade4,
           }}

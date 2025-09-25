@@ -61,7 +61,7 @@ function PasswdGenerator() {
       style={{
         backgroundColor: palette.bgshade1,
         borderColor: palette.bordershade,
-        color: palette.shade2,
+        color: palette.shade4,
       }}
     >
       <div className="flex m-3 w-full justify-center items-center ">
@@ -86,7 +86,7 @@ function PasswdGenerator() {
         </div>
         <div className="flex flex-row gap-6 w-full">
           <button
-            className="flex-2 p-2 transition transform ease-in-out rounded-2xl active:scale-97 active:transition-none focus:outline-none hover:ring-2"
+            className="flex-2 p-2 transition transform ease-in-out rounded-2xl active:scale-97 active:transition-none focus:outline-none"
             onClick={generatePassword}
             style={{
               backgroundColor: palette.shade2,

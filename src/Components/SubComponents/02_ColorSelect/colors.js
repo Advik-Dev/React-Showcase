@@ -10,7 +10,7 @@ export const colorMap = {
   Lavender: { bg: "#e066ff", text: "#000000" },
   Pink: { bg: "#ff1493", text: "#ffffff" },
   WarmYellow: { bg: "#ffd700", text: "#000000" },
-  Slate: { bg: "#3a506b", text: "#ffffff" },
+  Slate: { bg: "#F5F6F8", text: "#ffffff" },
 };
 
 
