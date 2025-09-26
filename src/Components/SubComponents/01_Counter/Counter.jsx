@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
-import { useColor } from "../../ColorContext/ColorContext";
+import { useColor } from "../../../context/ColorContext/ColorContext";
 
 function Counter() {
   const [counter, setCounter] = useState(0);

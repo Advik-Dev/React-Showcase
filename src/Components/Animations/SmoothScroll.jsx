@@ -16,6 +16,8 @@ export default function SmoothScroll({ children }) {
     container.scrollTop = savedScroll;
 
     const handleWheel = (e) => {
+      if (e.ctrlKey) return;
+
       e.preventDefault();
 
       const maxScroll = container.scrollHeight - container.clientHeight;
@@ -51,7 +53,7 @@ export default function SmoothScroll({ children }) {
 
   return (
     <div ref={containerRef} className="h-screen w-screen overflow-hidden">
-      <div className="h-[300vh]">{children}</div>
+      <div>{children}</div>
     </div>
   );
 }

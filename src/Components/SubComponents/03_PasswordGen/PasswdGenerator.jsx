@@ -3,7 +3,7 @@ import CheckBox from "./CheckBox";
 import PasswdBar from "./PasswdBar";
 import RangeSlider from "./RangeSlider";
 import CrackTime from "./CrackTime";
-import { useColor } from "../../ColorContext/ColorContext";
+import { useColor } from "../../../context/ColorContext/ColorContext";
 
 function PasswdGenerator() {
   const { palette } = useColor();

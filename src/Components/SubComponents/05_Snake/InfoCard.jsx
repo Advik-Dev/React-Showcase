@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useColor } from "../../ColorContext/ColorContext";
+import { useColor } from "../../../context/ColorContext/ColorContext";
 
 function InfoCard() {
   const { palette } = useColor();

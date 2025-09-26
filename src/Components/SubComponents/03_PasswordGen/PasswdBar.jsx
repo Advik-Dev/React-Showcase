@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Sidebutton from "./Sidebutton";
-import { useColor } from "../../ColorContext/ColorContext";
+import { useColor } from "../../../context/ColorContext/ColorContext";
 
 function PasswdBar({ password }) {
   const { palette } = useColor();

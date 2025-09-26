@@ -1,4 +1,4 @@
-import { useColor } from "./ColorContext/ColorContext";
+import { useColor } from "../context/ColorContext/ColorContext";
 import Bubbles from "./SubComponents/Bubbles";
 import Reveal from "./Animations/Reveal";
 
@@ -11,8 +11,12 @@ function Card({
 }) {
   const { palette } = useColor();
   let customInsert = null;
+
+  // F.Y.I, I know this is a bad implementation and I don't care /
   if (title == "Color Selector") {
-    customInsert = <span className="opacity-10">ground</span>;
+    customInsert = <span className="opacity-15">ground</span>;
+  } else if (title == "Currency Converter") {
+    customInsert = <span className="opacity-15">in Venezuelan bolívar</span>;
   }
   // console.log(palette);
 

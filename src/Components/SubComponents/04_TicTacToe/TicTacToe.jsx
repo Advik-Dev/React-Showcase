@@ -12,7 +12,7 @@ import {
   nextBattleAfterWin,
   nextBattleAfterLoss,
 } from "./otherData";
-import { useColor } from "../../ColorContext/ColorContext";
+import { useColor } from "../../../context/ColorContext/ColorContext";
 
 function TicTacToe() {
   const { palette } = useColor();

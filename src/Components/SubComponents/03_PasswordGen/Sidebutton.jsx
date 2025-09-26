@@ -1,4 +1,4 @@
-import { useColor } from "../../ColorContext/ColorContext";
+import { useColor } from "../../../context/ColorContext/ColorContext";
 
 function Sidebutton({ label = "click", etc, onClick }) {
   const { palette } = useColor();

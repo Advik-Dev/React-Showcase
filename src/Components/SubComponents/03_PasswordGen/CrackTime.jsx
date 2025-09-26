@@ -1,4 +1,4 @@
-import { useColor } from "../../ColorContext/ColorContext";
+import { useColor } from "../../../context/ColorContext/ColorContext";
 function CrackTime({ passwordLength, checkedItems }) {
   const { palette } = useColor();
   function formatTime(seconds) {

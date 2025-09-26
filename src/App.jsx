@@ -4,8 +4,8 @@ import Cards from "./Cards";
 import Divider from "./Divider";
 import DividerAlt from "./DividerAlt";
 import Footer from "./Footer";
-import { ColorProvider } from "./Components/ColorContext/ColorProvider";
-import { useColor } from "./Components/ColorContext/ColorContext";
+import { ColorProvider } from "./context/ColorContext/ColorProvider";
+import { useColor } from "./context/ColorContext/ColorContext";
 import BgGrid from "./BgGrid";
 import SmoothScroll from "./Components/Animations/SmoothScroll";
 

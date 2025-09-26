@@ -1,5 +1,5 @@
 import HeaderSvg from "./HeaderSvg";
-import { useColor } from "./Components/ColorContext/ColorContext";
+import { useColor } from "./context/ColorContext/ColorContext";
 
 function Header({ className }) {
   const { palette } = useColor();

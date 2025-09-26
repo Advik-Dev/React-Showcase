@@ -1,5 +1,5 @@
 import React from "react";
-import { useColor } from "../../ColorContext/ColorContext";
+import { useColor } from "../../../context/ColorContext/ColorContext";
 import { TbBackground } from "react-icons/tb";
 
 function Tile({ tileID, type }) {

@@ -1,4 +1,4 @@
-import { useColor } from "../ColorContext/ColorContext";
+import { useColor } from "../../context/ColorContext/ColorContext";
 function Bubbles({ bubbleArray }) {
   const { palette } = useColor();
   return (

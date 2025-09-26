@@ -6,13 +6,14 @@ import ColorSelector from "./Components/SubComponents/02_ColorSelect/ColorSelect
 import PasswdGenerator from "./Components/SubComponents/03_PasswordGen/PasswdGenerator";
 import TicTacToe from "./Components/SubComponents/04_TicTacToe/TicTacToe";
 import Snake from "./Components/SubComponents/05_Snake/Snake";
+import CurrencyExchange from "./Components/SubComponents/06_CurrencyConverter/CurrencyExchange";
 
 function Cards() {
   return (
     <div>
       <Card
         title="Counter"
-        description="Hey, Gotta start from somewhere right?"
+        description="This is where it all began"
         component={Counter}
         bubbles={["useState", "props", "event handling"]}
       />
@@ -21,12 +22,12 @@ function Cards() {
         title="Color Selector"
         description="Ah yes, The trusty color picker - it will always have your back"
         component={ColorSelector}
-        bubbles={["dynamic styling", "array mapping", "randomization"]}
+        bubbles={["dynamic styling", "contextAPI"]}
       />
 
       <Card
         title="Password Generator"
-        description="Well, now you can have a password even quantum computers will struggle with. Remembering it, however, is something you'll have to figure out on your own."
+        description="Create a password that even quantum computers will struggle trying to crack. Only for the most paranoid of people."
         component={PasswdGenerator}
         bubbles={["useCallback", "controlled components", "state lifting"]}
       />
@@ -40,12 +41,21 @@ function Cards() {
 
       <Card
         title="Snake Game"
-        description="How come these digital snakes eat everything except what they're actually supposed to eat"
+        description="The old classic. Eat apples, grow longer and move faster. Don't get too impatient though, or you might end up like ouroboros"
         component={Snake}
-        bubbles={["useEffect", "setInterval", "matrices"]}
+        bubbles={["useEffect", "setInterval"]}
       />
 
-      {/* <Card
+      <Card
+        title="Currency Converter"
+        description="Find out how rich you could have been if you invested in crypto back in 2010... Don't dwell on it though you still are a Millionare :D "
+        component={CurrencyExchange}
+        bubbles={["custom hooks", "API handling"]}
+      />
+
+      {/*
+      Template for new ones
+      <Card
         title="Filler Title"
         description="Filler Text"
         component={}

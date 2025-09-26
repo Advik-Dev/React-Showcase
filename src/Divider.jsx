@@ -1,4 +1,4 @@
-import { useColor } from "./Components/ColorContext/ColorContext";
+import { useColor } from "./context/ColorContext/ColorContext";
 
 function Divider({ text }) {
   const { palette } = useColor();

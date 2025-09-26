@@ -1,6 +1,6 @@
 import Button from "./Button";
 import { colorMap } from "./colors.js";
-import { useColor } from "../../ColorContext/ColorContext.jsx";
+import { useColor } from "../../../context/ColorContext/ColorContext.jsx";
 
 function ColorSelector() {
   const { _primaryColor, setPrimaryColor, palette } = useColor();

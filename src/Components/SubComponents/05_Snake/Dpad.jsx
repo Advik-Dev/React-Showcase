@@ -1,5 +1,5 @@
 import React from "react";
-import { useColor } from "../../ColorContext/ColorContext";
+import { useColor } from "../../../context/ColorContext/ColorContext";
 
 function Dpad({ setDirection }) {
   const { palette } = useColor();

@@ -2,7 +2,7 @@ import Tile from "./Tile";
 import { opposites, keyToDirection } from "./otherData.js";
 import { useState, useEffect, useRef, useCallback } from "react";
 import Dpad from "./Dpad.jsx";
-import { useColor } from "../../ColorContext/ColorContext";
+import { useColor } from "../../../context/ColorContext/ColorContext.jsx";
 import InfoCard from "./InfoCard.jsx";
 
 function Snake() {

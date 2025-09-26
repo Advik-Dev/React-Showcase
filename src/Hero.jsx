@@ -1,5 +1,5 @@
 import ReactLogo from "./assets/reactLogo.png";
-import { useColor } from "./Components/ColorContext/ColorContext";
+import { useColor } from "./context/ColorContext/ColorContext";
 import Reveal from "./Components/Animations/Reveal";
 
 function Hero() {

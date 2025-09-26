@@ -1,6 +1,6 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaTwitter } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import { useColor } from "./Components/ColorContext/ColorContext";
+import { useColor } from "./context/ColorContext/ColorContext";
 
 function Footer() {
   const { palette } = useColor();

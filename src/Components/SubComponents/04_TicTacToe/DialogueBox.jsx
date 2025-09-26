@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useColor } from "../../ColorContext/ColorContext";
+import { useColor } from "../../../context/ColorContext/ColorContext";
 
 function DialogueBox({ text }) {
   const { palette } = useColor();
@@ -29,7 +29,7 @@ function DialogueBox({ text }) {
       className="w-11/12 max-w-3xl rounded-xl px-6 shadow-xl text-center text-xl font-semibold justify-center"
       style={{
         backgroundColor: palette.bgshade4,
-        color: palette.shade2,
+        color: palette.shade4,
       }}
     >
       {displayedText}
