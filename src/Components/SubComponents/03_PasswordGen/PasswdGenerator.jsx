@@ -3,7 +3,7 @@ import CheckBox from "./CheckBox";
 import PasswdBar from "./PasswdBar";
 import RangeSlider from "./RangeSlider";
 import CrackTime from "./CrackTime";
-import { useColor } from "../../ColorContext/ColorContext";
+import { useColor } from "../../../context/ColorContext/ColorContext";
 
 function PasswdGenerator() {
   const { palette } = useColor();
@@ -57,10 +57,14 @@ function PasswdGenerator() {
 
   return (
     <div
-      className="p-5 rounded-2xl flex justify-center items-center flex-col lg:min-w-140 md:min-w-100 border-4"
-      style={{ backgroundColor: palette.shade2 }}
+      className="p-5 rounded-2xl flex justify-center items-center flex-col border-2"
+      style={{
+        backgroundColor: palette.bgshade1,
+        borderColor: palette.bordershade,
+        color: palette.shade4,
+      }}
     >
-      <div className="flex m-3 w-[100%] justify-center items-center ">
+      <div className="flex m-3 w-full justify-center items-center ">
         <PasswdBar password={password} />
       </div>
       <div className="flex gap-3 flex-wrap text-center">
@@ -80,12 +84,12 @@ function PasswdGenerator() {
             onChange={handleCheckBoxChange}
           />
         </div>
-        <div className="flex flex-row gap-6">
+        <div className="flex flex-row gap-6 w-full">
           <button
-            className="w-30 md:w-xs p-2 transition transform ease-in-out rounded-2xl active:scale-97 active:transition-none focus:outline-none hover:ring-2"
+            className="flex-2 p-2 transition transform ease-in-out rounded-2xl active:scale-97 active:transition-none focus:outline-none"
             onClick={generatePassword}
             style={{
-              backgroundColor: palette.shade4,
+              backgroundColor: palette.shade2,
               color: palette.shade0,
               "--tw-ring-color": palette.shade0,
             }}
@@ -93,12 +97,7 @@ function PasswdGenerator() {
             Generate New
           </button>
           <div className="flex justify-center">
-            <p
-              className="text-xl sm:text-3xl self-center justify-end"
-              style={{
-                color: palette.shade0,
-              }}
-            >
+            <p className="text-xl sm:text-3xl self-center justify-end">
               Length : {passwordLength < 10 ? "0" : ""}
               {passwordLength}
             </p>

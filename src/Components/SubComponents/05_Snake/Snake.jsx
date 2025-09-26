@@ -2,7 +2,8 @@ import Tile from "./Tile";
 import { opposites, keyToDirection } from "./otherData.js";
 import { useState, useEffect, useRef, useCallback } from "react";
 import Dpad from "./Dpad.jsx";
-import { useColor } from "../../ColorContext/ColorContext";
+import { useColor } from "../../../context/ColorContext/ColorContext.jsx";
+import InfoCard from "./InfoCard.jsx";
 
 function Snake() {
   const { palette } = useColor();
@@ -192,12 +193,19 @@ function Snake() {
 
   return (
     <div
-      className="min-w-80 md:min-w-100 lg:min-w-140 rounded-2xl flex lg:flex-row flex-col items-center justify-center relative border-4"
-      style={{ backgroundColor: palette.shade2, borderColor: palette.shade0 }}
+      className="min-w-80 md:min-w-100 lg:min-w-140 rounded-2xl flex lg:flex-row flex-col items-center justify-center relative border-2"
+      style={{
+        backgroundColor: palette.bgshade1,
+        borderColor: palette.bordershade,
+      }}
     >
+      <InfoCard />
       <div
         className="border-3 md:m-10 m-4 shadow-inner"
-        style={{ borderColor: palette.shade0, backgroundColor: palette.shade1 }}
+        style={{
+          borderColor: palette.bgshade4,
+          backgroundColor: palette.bgshade2,
+        }}
       >
         <div className="grid grid-cols-15">
           {tiles.flat().map((type, index) => (
@@ -208,12 +216,12 @@ function Snake() {
       <div className="flex mb-5 md:items-center flex-col items-center text-center">
         <div
           className="mb-5 font-bold text-4xl"
-          style={{ color: palette.shade0 }}
+          style={{ color: palette.shade2 }}
         >
           - {score} -
           <div
             className="text-sm text-center"
-            style={{ color: palette.shade0 }}
+            style={{ color: palette.bgshade4 }}
           >
             High Score - {localStorage.getItem("snakeHS") || 0}
           </div>
@@ -229,14 +237,14 @@ function Snake() {
             ${gameRunning.current ? "scale-0" : "scale-100"}
           `}
           style={{
-            color: palette.shade4,
-            backgroundColor: palette.shade1,
+            color: palette.shade0,
+            backgroundColor: palette.shade2,
           }}
           onMouseEnter={(e) =>
-            (e.currentTarget.style.backgroundColor = palette.shade0)
+            (e.currentTarget.style.backgroundColor = palette.shade1)
           }
           onMouseLeave={(e) =>
-            (e.currentTarget.style.backgroundColor = palette.shade1)
+            (e.currentTarget.style.backgroundColor = palette.shade2)
           }
           onClick={startGame}
         >

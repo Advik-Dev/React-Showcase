@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
-import { useColor } from "../../ColorContext/ColorContext";
+import { useColor } from "../../../context/ColorContext/ColorContext";
 
 function Counter() {
   const [counter, setCounter] = useState(0);
@@ -16,17 +16,16 @@ function Counter() {
 
   return (
     <div
-      className="flex flex-col justify-center h-1/2 rounded-2xl border-4"
+      className="flex flex-col justify-center rounded-2xl border-2"
       style={{
-        backgroundColor: palette.shade2,
-        borderColor: palette.shade0,
+        backgroundColor: palette.bgshade1,
+        borderColor: palette.bordershade,
       }}
     >
       <div
-        className="text-3xl md:text-4xl m-3 text-center w-1/3 self-center p-3 rounded-lg"
+        className="text-3xl md:text-4xl m-3 text-center w-full self-center p-3 rounded-lg transition"
         style={{
-          color: palette.shade1,
-          backgroundColor: palette.shade3,
+          color: palette.shade2,
         }}
       >
         {counter}
