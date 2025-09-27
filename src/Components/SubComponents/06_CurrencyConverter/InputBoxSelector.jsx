@@ -96,12 +96,13 @@ function InputBoxSelector({
           value={displayCurrency || ""} // always controlled
           onChange={handleInputChange}
           onClick={handleInputClick}
+          placeholder="Enter currency"
         />
       </label>
 
       {isOpen && filteredOptions.length > 0 && (
         <ul
-          className="absolute z-10 mt-1 w-[150%] rounded-lg shadow-lg max-h-40 overflow-auto"
+          className="native-scroll scroll-smooth absolute z-20 mt-1 w-[150%] rounded-lg shadow-lg max-h-40 overflow-auto"
           style={{ backgroundColor: palette.bgshade4 }}
         >
           <style>{`

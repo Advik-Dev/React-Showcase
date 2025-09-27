@@ -50,6 +50,7 @@ function Cards() {
         title="Currency Converter"
         description="Find out how rich you could have been if you invested in crypto back in 2010... Don't dwell on it though you still are a Millionare :D "
         component={CurrencyExchange}
+        componentFlex={"flex-1/10"}
         bubbles={["custom hooks", "API handling"]}
       />
 

@@ -6,6 +6,7 @@ function Card({
   title,
   description,
   component: Component,
+  componentFlex = "flex-1",
   bubbles,
   smallDescription = null,
 }) {
@@ -41,7 +42,7 @@ function Card({
           </h2>
 
           <p
-            className="text-base md:text-lg leading-relaxed"
+            className="text-base text-md md:text-lg leading-relaxed"
             style={{ color: palette.shade4 }}
           >
             {description}
@@ -63,7 +64,7 @@ function Card({
           </p>
           <Bubbles bubbleArray={bubbles} />
         </div>
-        <div className="flex-1 flex justify-center">
+        <div className={`${componentFlex} flex justify-center w-full`}>
           <Component />
         </div>
       </div>

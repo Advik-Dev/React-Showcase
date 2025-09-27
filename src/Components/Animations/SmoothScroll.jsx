@@ -18,6 +18,10 @@ export default function SmoothScroll({ children }) {
     const handleWheel = (e) => {
       if (e.ctrlKey) return;
 
+      if (e.target.closest(".native-scroll")) {
+        return;
+      }
+
       e.preventDefault();
 
       const maxScroll = container.scrollHeight - container.clientHeight;

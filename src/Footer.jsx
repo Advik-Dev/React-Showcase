@@ -4,6 +4,23 @@ import { useColor } from "./context/ColorContext/ColorContext";
 
 function Footer() {
   const { palette } = useColor();
+
+  const stripeStyle = (color1, color2, height, zIndex) => ({
+    position: "absolute",
+    right: 0,
+    left: 0,
+    bottom: "100%",
+    height: height,
+    zIndex: zIndex,
+    backgroundSize: "4rem 100%",
+    backgroundPosition: "0 0",
+    backgroundImage: `
+    linear-gradient(45deg, ${color1} 25%, transparent 25%),
+    linear-gradient(315deg, ${color2} 25%, transparent 25%)
+  `,
+    pointerEvents: "none", // optional: prevent blocking interactions
+  });
+
   return (
     <div className="relative">
       {/* Spike top */}
@@ -14,21 +31,9 @@ function Footer() {
         }}
       >
         <div
-          className="absolute right-0 left-0 bottom-full z-20 h-[60px]"
-          style={{
-            backgroundSize: "60px 100%",
-            backgroundPosition: "0 0",
-            backgroundImage: `linear-gradient(45deg, ${palette.bgshade2} 25%, transparent 25%), linear-gradient(315deg, ${palette.bgshade2}  25%, transparent 25%)`,
-          }}
-        ></div>
-        <div
-          className="absolute right-0 left-0 bottom-full z-10 h-[65px]"
-          style={{
-            backgroundSize: "60px 100%",
-            backgroundPosition: "0 0",
-            backgroundImage: `linear-gradient(45deg, ${palette.shade2} 25%, transparent 25%), linear-gradient(315deg, ${palette.shade2}  25%, transparent 25%)`,
-          }}
-        ></div>
+          style={stripeStyle(palette.bgshade2, palette.bgshade2, "60px", 20)}
+        />
+        <div style={stripeStyle(palette.shade1, palette.shade2, "80px", 10)} />
       </div>
 
       <div

@@ -3,8 +3,9 @@ import InputBoxAmount from "./InputBoxAmount";
 import InputBoxSelector from "./InputBoxSelector";
 import { useState, useEffect } from "react";
 import useCurrencyList from "../../../hooks/Currency/useCurrencyList";
-import useCurrencyRates from "../../../hooks/Currency/useCurrencyInfo";
+import useCurrencyInfo from "../../../hooks/Currency/useCurrencyInfo";
 import SwitchCurrencyBtn from "./SwitchCurrencyBtn";
+import CurrencyChart from "./CurrencyChart";
 
 function CurrencyExchange() {
   const { palette } = useColor();
@@ -14,8 +15,8 @@ function CurrencyExchange() {
   const [fromAmt, setFromAmt] = useState("");
   const [toAmt, setToAmt] = useState("");
 
-  const fromAmtRates = useCurrencyRates(from) || 0;
-  const toAmtRates = useCurrencyRates(to) || 0;
+  const fromAmtRates = useCurrencyInfo(from) || 0;
+  const toAmtRates = useCurrencyInfo(to) || 0;
 
   const currencies = useCurrencyList() || {};
 
@@ -34,38 +35,37 @@ function CurrencyExchange() {
       setFromAmt("");
       return;
     }
-
     if (num < 1e15) {
       setFromAmt(num);
     }
   }
 
   function formatNumber(val) {
-    const num = Number(val);
+    const num = Number(val).toFixed(2);
     if (Math.abs(num) < 0.0001) {
       return val; // very small, keep as string
     }
-    return num.toLocaleString(undefined, { maximumSignificantDigits: 8 });
+    return num.toLocaleString(undefined);
   }
 
   return (
     <div
-      className="min-w-100 md:min-w-120 lg:min-w-160 rounded-2xl flex lg:flex-row flex-col items-center justify-center relative border-2"
+      className="w-full rounded-2xl flex lg:flex-row flex-col items-center justify-center relative border-2"
       style={{
         backgroundColor: palette.bgshade1,
         borderColor: palette.bordershade,
         color: palette.shade4,
       }}
     >
-      <div className="flex flex-col rounded-4xl w-10/11 justify-center items-center">
+      <div className="w-full flex flex-col rounded-2xl lg:m-3 justify-center items-center">
         <form
-          className="flex flex-col md:flex-row gap-2 p-3 my-3 rounded-2xl mb-0"
+          className="w-full flex flex-col xl:flex-row gap-2 p-3 rounded-2xl mb-0"
           style={{
             backgroundColor: palette.bgshade3,
             borderColor: palette.bordershade,
             color: palette.shade4,
           }}
-          onClick={(e) => e.preventDefault()}
+          onSubmit={(e) => e.preventDefault()}
         >
           <InputBoxAmount
             className={"flex-3 md:flex-1"}
@@ -94,24 +94,38 @@ function CurrencyExchange() {
             label="To"
           />
         </form>
-        <div className="w-full p-2 mt-0 overflow-hidden">
-          <p className="text-md  " style={{}}>
-            {fromAmt == "" ? "0" : fromAmt}{" "}
-            {currencies[from] || from.toUpperCase()} =
-          </p>
-          <p className="text-4xl" style={{}}>
-            {formatNumber(toAmt)} {currencies[to]}
-          </p>
-          <div className="text-sm my-2" style={{ color: palette.shade3 }}>
-            <p>
-              1 {currencies[from] || from.toUpperCase()} ={" "}
-              {formatNumber(fromAmtRates[to])} {to.toUpperCase()}
+        <div className="flex flex-col xl:flex-row w-full">
+          <div className="w-full p-4 overflow-hidden flex flex-col justify-center">
+            <p className="text-base">
+              {fromAmt === "" ? "0" : fromAmt}{" "}
+              {currencies[from] || from.toUpperCase()} =
             </p>
-            <p>
-              1 {currencies[to]} = {formatNumber(toAmtRates[from])}{" "}
-              {from.toUpperCase()}
+            <p className="text-3xl font-bold mb-4 wrap-anywhere">
+              {formatNumber(toAmt)} {currencies[to]}
             </p>
+
+            <div
+              className="text-sm space-y-1"
+              style={{ color: palette.shade3 }}
+            >
+              <p>
+                1 {currencies[from] || from.toUpperCase()} ={" "}
+                {formatNumber(fromAmtRates[to])} {to.toUpperCase()}
+              </p>
+              <p>
+                1 {currencies[to]} = {formatNumber(toAmtRates[from])}{" "}
+                {from.toUpperCase()}
+              </p>
+            </div>
           </div>
+
+          <CurrencyChart
+            className="mt-3 w-full self-center"
+            width="300"
+            height="150"
+            from={from}
+            to={to}
+          />
         </div>
       </div>
     </div>
