@@ -12,7 +12,7 @@ function CurrencyExchange() {
 
   const [from, setFrom] = useState("btc");
   const [to, setTo] = useState("usd");
-  const [fromAmt, setFromAmt] = useState("");
+  const [fromAmt, setFromAmt] = useState("1");
   const [toAmt, setToAmt] = useState("");
 
   const fromAmtRates = useCurrencyInfo(from) || 0;

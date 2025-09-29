@@ -25,3 +25,81 @@ body {
   --font-geo: Geo, sans-serif;
   --animate-spin-slow: spin-slow 30s linear infinite;
 }
+
+@keyframes dropDown {
+  0% {
+    transform: rotate(-180deg) translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(-180deg) translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-drop-down-1 {
+  animation: dropDown ease-out 0.5s both;
+  transform-origin: center;
+}
+
+.animate-drop-down-2 {
+  animation: dropDown ease-out 0.7s both;
+  transform-origin: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn ease-out 0.3s both;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  15% {
+    transform: rotate(14deg);
+  }
+
+  30% {
+    transform: rotate(-8deg);
+  }
+
+  40% {
+    transform: rotate(14deg);
+  }
+
+  50% {
+    transform: rotate(-4deg);
+  }
+
+  60% {
+    transform: rotate(10deg);
+  }
+
+  70% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 1.5s ease-in-out 1;
+  /* 1 run only */
+  transform-origin: 70% 70%;
+  /* pivot around bottom right */
+}

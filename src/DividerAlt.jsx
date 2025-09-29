@@ -4,7 +4,7 @@ function DividerAlt({ text, subtext }) {
   const { palette } = useColor();
   return (
     <div
-      className="relative w-full text-center mb-10 md:my-12 md:mb-20 flex flex-col text-shadow-lg"
+      className="relative w-full text-center mb-10 md:my-12 md:mb-20 flex flex-col text-shadow-lg animate-fade-in"
       style={{ color: palette.shade2 }}
     >
       <hr className="border-2 m-2" />

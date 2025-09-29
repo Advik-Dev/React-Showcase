@@ -7,7 +7,7 @@ function Header({ className }) {
     <div className={`${className} relative`}>
       <HeaderSvg />
       <h1
-        className="font-pacifico text-4xl sm:text-5xl md:text-7xl p-4 text-center w-full text-shadow-lg"
+        className="font-pacifico text-4xl sm:text-5xl md:text-7xl p-4 text-center w-full text-shadow-lg animate-fade-in"
         style={{ color: palette.shade2 }}
       >
         My React.js Projects

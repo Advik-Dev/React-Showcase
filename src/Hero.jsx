@@ -2,13 +2,15 @@ import ReactLogo from "./assets/reactLogo.png";
 import { useColor } from "./context/ColorContext/ColorContext";
 import Reveal from "./Components/Animations/Reveal";
 
-function Hero() {
+function Hero({ className }) {
   const { palette } = useColor();
   return (
-    <Reveal>
-      <div className="m-4 md:m-10 lg:mx-40 mt-10 lg:mt-20 flex justify-center">
+    <Reveal className={`${className} relative`}>
+      <div
+        className={`m-4 md:m-10 lg:mx-40 mt-10 lg:mt-20 flex justify-center`}
+      >
         <div
-          className="rounded-3xl hover:shadow-lg transition-shadow duration-500 flex flex-col md:flex-row items-center p-8 md:p-12 space-y-8 md:space-y-0 md:space-x-10 w-full border-2"
+          className={`rounded-3xl hover:shadow-lg transition-shadow duration-500 flex flex-col md:flex-row items-center p-8 md:p-12 space-y-8 md:space-y-0 md:space-x-10 w-full border-2`}
           style={{
             background: `linear-gradient(-320deg, ${palette.bgshade2} 50%, ${palette.shade3} 500%)`,
             borderColor: palette.bordershade,
@@ -20,7 +22,7 @@ function Hero() {
               className="text-3xl md:text-4xl font-extrabold drop-shadow-sm transition-transform duration-300"
               style={{ color: palette.shade2 }}
             >
-              👋 Hey There!!
+              <span className="wave">👋</span> Hey There!!
             </h2>
             <p className="text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0">
               Welcome to my React learning journey! I’ve compiled everything

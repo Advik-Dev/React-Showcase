@@ -30,43 +30,51 @@ function Card({
           borderColor: palette.bordershade,
         }}
       >
-        <div className="text-center md:text-left flex-1 p-3 rounded-2xl">
-          <h2
-            className="w-max text-2xl md:text-3xl font-bold mb-3 rounded-xl p-3 mx-auto md:mx-0 text-center md:text-left"
-            style={{ backgroundColor: palette.bgshade4, color: palette.shade4 }}
-          >
-            <span className="font-bold" style={{ color: palette.shade2 }}>
-              //:{" "}
-            </span>
-            {title}
-          </h2>
+        <Reveal
+          className="flex flex-col lg:flex-row w-full items-center"
+          delay={100}
+        >
+          <div className="text-center md:text-left flex-1 p-3 rounded-2xl">
+            <h2
+              className="w-max text-2xl md:text-3xl font-bold mb-3 rounded-xl p-3 mx-auto md:mx-0 text-center md:text-left"
+              style={{
+                backgroundColor: palette.bgshade4,
+                color: palette.shade4,
+              }}
+            >
+              <span className="font-bold" style={{ color: palette.shade2 }}>
+                //:{" "}
+              </span>
+              {title}
+            </h2>
 
-          <p
-            className="text-base text-md md:text-lg leading-relaxed"
-            style={{ color: palette.shade4 }}
-          >
-            {description}
-            {customInsert}
-          </p>
-          {smallDescription && (
             <p
-              className="text-xs absolute bottom-10"
+              className="text-base text-md md:text-lg leading-relaxed"
+              style={{ color: palette.shade4 }}
+            >
+              {description}
+              {customInsert}
+            </p>
+            {smallDescription && (
+              <p
+                className="text-xs absolute bottom-10"
+                style={{ color: palette.shade2 }}
+              >
+                {smallDescription}
+              </p>
+            )}
+            <p
+              className="text-sm mt-2 mb-1 ml-1 "
               style={{ color: palette.shade2 }}
             >
-              {smallDescription}
+              Stuff I learned while making this -
             </p>
-          )}
-          <p
-            className="text-sm mt-2 mb-1 ml-1 "
-            style={{ color: palette.shade2 }}
-          >
-            Stuff I learned while making this -
-          </p>
-          <Bubbles bubbleArray={bubbles} />
-        </div>
-        <div className={`${componentFlex} flex justify-center w-full`}>
-          <Component />
-        </div>
+            <Bubbles bubbleArray={bubbles} />
+          </div>
+          <div className={`${componentFlex} flex justify-center w-full`}>
+            <Component />
+          </div>
+        </Reveal>
       </div>
     </Reveal>
   );
